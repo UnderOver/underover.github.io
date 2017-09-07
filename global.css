@@ -1,0 +1,162 @@
+﻿html, body
+{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.header {
+    background: linear-gradient(0deg, gray, #aaa7a7);
+    box-shadow: 0px -3px 5px 5px #000000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+}
+
+/* Strip the ul of padding and list styling*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    float: left;
+    margin-right: 1px;
+}
+
+li a {
+    display: block;
+    min-width: 140px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: black;
+    text-decoration: none;
+}
+
+/* Hover state for links */
+li:hover a {
+    background: #00ffff;
+    padding: 0;
+    color: white;
+    transition: 0.3s ease-in;
+}
+
+/*Style for dropdown links*/
+li:hover ul li a {
+    color: white;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+}
+
+/*Hover state for drop-down links*/
+li:hover ul li a:hover {
+    background: black;
+    color: #fff;
+}
+
+/*Hide dropdown links*/
+li ul {
+    display: none;
+}
+
+/*Make dropdown links vertical*/
+li ul li{
+    display: block;
+    float: none;
+}
+
+/*prevent text wrapping on dropdown links*/
+li ul li a {
+    width: auto;
+    min-width: 100px;
+    padding: 0 20px;
+}
+
+/*Display dropdown on hover*/
+ul li a:hover + .hidden, .hidden:hover {
+    display: block;
+    transition: 0.3s ease-in;
+}
+
+/*Hide Checkbox*/
+input[type=checkbox] {
+    display: none;
+}
+
+/*show menu when checkbox checked*/
+input[type=checkbox]:checked ~ #menu {
+    display: block;
+}
+
+.show-menu {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    color: #fff;
+    background: #00ff21;
+    text-align: center;
+    padding: 10px 0;
+    display: none;
+}
+
+/*Responsive styles*/
+@media screen and (max-width: 760px) {
+    ul {
+        position: static;
+        display: none;
+    }
+
+    li {
+        margin-bottom: 1px;
+    }
+    
+    ul li, li a {
+        width: 100%;
+    }
+
+    .show-menu {
+        display: block;
+    }
+
+    body{
+        background-image: none;
+    }
+}
+
+#login {
+    float: right;
+    margin: 0;
+}
+
+#menu {
+    padding: 0 5%;
+}
+
+footer {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    color: white;
+    background: black;
+}
+
+footer p1 {
+    padding: 0 0 0 20px;
+}
+
+.main-img {
+    background-image: url(Images/background2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
