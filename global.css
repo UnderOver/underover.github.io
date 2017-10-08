@@ -4,144 +4,13 @@
     height: 100%;
     width: 100%;
     font-family: 'Open Sans', Helvetica, serif;
+    flex-flow: column;
+    display: flex;
+    background: #474A89;
 }
 
-.header {
-    /*background: linear-gradient(0deg, gray, #aaa7a7);*/
-    box-shadow: 0px -0px 5px 2px #000000;
-    top: 20%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 100%;
-    height: 50px;
-    background: rgba(0,0,0,0.6);
-    font-size: 15px;
-}
 
-/* Strip the ul of padding and list styling*/
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    display: inline-block;
-    float: left;
-    margin-right: 1px;
-}
-
-li a {
-    display: block;
-    min-width: 140px;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    color: white;
-    text-decoration: none;
-}
-
-/* Hover state for links */
-li:hover a {
-    background: #00ffff;
-    padding: 0;
-    color: black;
-    transition: 0.3s ease-in;
-}
-
-/*Style for dropdown links*/
-li:hover ul li a {
-    color: black;
-    height: 40px;
-    line-height: 40px;
-    margin: 0;
-}
-
-/*Hover state for drop-down links*/
-li:hover ul li a:hover {
-    background: black;
-    color: #fff;
-}
-
-/*Hide dropdown links*/
-li ul {
-    display: none;
-}
-
-/*Make dropdown links vertical*/
-li ul li{
-    display: block;
-    float: none;
-}
-
-/*prevent text wrapping on dropdown links*/
-li ul li a {
-    width: auto;
-    min-width: 100px;
-    padding: 0 20px;
-}
-
-/*Display dropdown on hover*/
-ul li a:hover + .hidden, .hidden:hover {
-    display: block;
-    transition: 0.3s ease-in;
-    position: relative;
-    z-index: 1000;
-}
-
-/*Hide Checkbox*/
-input[type=checkbox] {
-    display: none;
-}
-
-/*show menu when checkbox checked*/
-input[type=checkbox]:checked ~ #menu {
-    display: block;
-}
-
-.show-menu {
-    text-decoration: none;
-    color: #fff;
-    background: #00ff21;
-    text-align: center;
-    padding: 10px 0;
-    display: none;
-}
-
-/*Responsive styles*/
-@media screen and (max-width: 760px) {
-    ul {
-        position: static;
-        display: none;
-    }
-
-    li {
-        margin-bottom: 1px;
-    }
-    
-    ul li, li a {
-        width: 100%;
-    }
-
-    .show-menu {
-        display: block;
-    }
-
-    body{
-        background-image: none;
-    }
-}
-
-#login {
-    float: right;
-    margin: 0;
-}
-
-#menu {
-    padding: 0 5%;
-}
+/* FOOTER */
 
 footer {
     margin: auto;
@@ -159,19 +28,8 @@ footer p1 {
     padding: 0;
 }
 
-.main-img {
-    /*background-image: url(Images/background2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;*/
-    background-color: #474A89;   
-    width: 100%;
-    height: 100%;
-    z-index: -1;
 
-	flex-flow: column;
-	display: flex;
-}
+/* TTILE */
 
 .title-holder {
     filter: none;
@@ -195,12 +53,13 @@ footer p1 {
 
 .main-body {
 	width: 97%;
-	height: 100%;
+	height: auto;
+    min-height: 500px;
 	position: relative;
 	margin: 3% auto;
 	padding: 0;
 	background: rgba(0,0,0,0.6);
-	flex: 1;
+    flex: 1;
 	overflow: hidden;
 	outline: black 3px solid;
 	
@@ -212,13 +71,35 @@ footer p1 {
     background-color: #282B6B;
     flex: 1;
     position: relative;
-    overflow: auto;
+    overflow: hidden;
     height: 100%;
-    width: 95%;
+    width: 100%;
     outline: black solid 3px;
     align-self: center;
     display: flex;
     flex-flow: column;
+}
+
+.handle {
+    background: black;
+    color: white;
+    flex: .01;
+    position: relative;
+    width: 100%;
+    height: 10%;
+    font-size: 4vw;
+    font-weight: bold;
+    overflow: auto;
+    display: none;
+    cursor: pointer;
+    text-align: center;
+    padding: 0;
+}
+
+.handle p {
+    display: table-cell;
+    vertical-align: middle;
+    height: auto;
 }
 
 #LoginButton {
@@ -261,6 +142,12 @@ footer p1 {
     font-size: 20px;
     transition: 0.3s;
     display: table;
+    cursor: pointer;
+}
+
+.Active-Button, .Active-Button p {
+    background: white;
+    color: black;
 }
 
 .Content-Button:hover {
@@ -293,6 +180,7 @@ footer p1 {
     color: black;
     font-size: 25px;
     transition: .3s;
+    text-decoration: underline;
 }
 
 #DownloadsContent div {
@@ -300,4 +188,49 @@ footer p1 {
     height: auto;
     width: 100%;
     margin: 10px 0;
+}
+
+
+
+/* RESPONSIVE WEB DESIGN */
+
+@media only screen and (max-width: 768px) {
+
+    .title {
+        font-size: 8vw;
+    }
+
+    .main-body {
+        flex-flow: column;
+        height: auto;
+    }
+
+    .Content-Button {
+        font-size: 4vw;
+        margin: auto;
+        position: relative;
+    }
+
+    .NavBox {
+        max-height: 0;
+    }
+
+    .showing {
+        min-height: 10em;
+    }
+
+    .handle {
+        display: table;
+        overflow: hidden;
+    }
+
+    .innerContent p {
+        font-size: 3vw;
+    }
+
+    #LoginButton {
+        position: relative;
+        margin: 0;
+    }
+
 }

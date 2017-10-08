@@ -15,84 +15,64 @@
     </head>
     <body onload="StartUp()">
         
-        <label for="show-menu" class="show-menu">Show Menu</label>
-        <input type="checkbox" id="show-menu" role="button" />
+        <div class="title-holder">
+            <h1 class="title">Flashcard Revision Project</h1>
+        </div>
+			
+		<!--Main Page-->
+		<div class="main-body">
 
-
-        <div class="main-img">
-
-			<!--Title-->
-            <div class="title-holder">
-                <h1 class="title">Flashcard Revision Project</h1>
+            <!--Navigation Bar-->
+			<div class="NavBox">
+                <div class="Content-Button" id="HomeButton" onclick="ChangeMainContent('HomeContent', 'HomeButton')"><p>Home</p></div>
+                <div class="Content-Button" id="AboutButton" onclick="ChangeMainContent('AboutContent', 'AboutButton')"><p>About</p></div>
+                <div class="Content-Button" id="DownloadsButton" onclick="ChangeMainContent('DownloadsContent', 'DownloadsButton')"><p>Downloads</p></div>
+                <div class="Content-Button" id="ContactButton" onclick="ChangeMainContent('ContactContent', 'ContactButton')"><p>Contact</p></div>
+                <div class="Content-Button" id="LoginButton"><p>Login</p></div>
             </div>
 
-            <!--NavBar-->
-            <!--<div class="header">
-                <ul id="menu">
-                    <li><a href="#">Home</a></li>
-                    <li>
-                        <a href="#">About</a>
-                        <ul class="hidden">
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Downloads</a>
-                        <ul class="hidden">
-                            <li><a href="Files/FlashcardRevision Installer.msi">V0.1</a></li>
-                            <li><a href="#">V0.2</a></li>
-                        </ul>
-                    </li>
-                    <li id="login"><a href="#">Login</a></li>
-                </ul>
-            </div>-->
-			
-			<!--Main Page-->
-			<div class="main-body">
+            <div class="handle" onclick="ShowNavBox()">
+                <p>Menu</p>
+            </div>
 
-                <!--Navigation Bar-->
-				<div class="NavBox">
-                    <div class="Content-Button" id="HomeButton" onclick="TestFunction('HomeContent')"><p>Home</p></div>
-                    <div class="Content-Button" id="AboutButton" onclick="TestFunction('AboutContent')"><p>About</p></div>
-                    <div class="Content-Button" id="DownloadsButton" onclick="TestFunction('DownloadsContent')"><p>Downloads</p></div>
-                    <div class="Content-Button" id="LoginButton"><p>Login</p></div>
+            <!--Content Box-->
+			<div class="ContentBox">
+
+                <!--Home Page-->
+                <div id="HomeContent" class="innerContent">
+                    <h1>Home</h1>
+                    <hr />
+                    <p>Welcome to the Flashcard Revision Program Official Website!</p>
                 </div>
 
-                <!--Content Box-->
-				<div class="ContentBox">
-
-                    <!--Home Page-->
-                    <div id="HomeContent" class="innerContent">
-                        <h1>Home</h1>
-                        <hr />
-                        <p>Welcome to the Flashcard Revision Program Official Website!</p>
-                    </div>
-
-                    <!--About Page-->
-                    <div id="AboutContent" class="innerContent">
-                        <h1>About</h1>
-                    </div>
-
-                    <!--Downloads Page-->
-                    <div id="DownloadsContent" class="innerContent">
-                        <h1>Downloads</h1>
-                        <hr />
-                        <div><h2>24/5/2017 - V0.2<a href="Files/FlashcardRevision Installer V0.2.msi">Download</a></h2></div>
-                        <div><h2>25/5/2017 - V0.3<a href="Files/FlashcardRevision Installer V0.3.msi">Download</a></h2></div>
-                        <div><h2>31/5/2017 - V0.4<a href="Files/FlashcardRevision Installer V0.4.msi">Download</a></h2></div>
-                        <div><h2>6/6/2017 - V0.5<a href="Files/FlashcardRevision Installer V0.5.msi">Download</a></h2></div>
-                    </div>
+                <!--About Page-->
+                <div id="AboutContent" class="innerContent">
+                    <h1>About</h1>
                 </div>
 
-			</div>
-			
-			<footer>
-            <p1>Flashcard Revision Program Webpage - Mackenzie Dickinson &copy; 2017</p1>
-			</footer>
-			
-        </div>
+                <!--Downloads Page-->
+                <div id="DownloadsContent" class="innerContent">
+                    <h1>Downloads</h1>
+                    <hr />
+                    <div><h2>24/5/2017 - V0.2<a href="Files/FlashcardRevision Installer V0.2.msi">Download</a></h2></div>
+                    <div><h2>25/5/2017 - V0.3<a href="Files/FlashcardRevision Installer V0.3.msi">Download</a></h2></div>
+                    <div><h2>31/5/2017 - V0.4<a href="Files/FlashcardRevision Installer V0.4.msi">Download</a></h2></div>
+                    <div><h2>6/6/2017 - V0.5<a href="Files/FlashcardRevision Installer V0.5.msi">Download</a></h2></div>
+                </div>
 
+                <div id="ContactContent" class="innerContent">
+                    <h1>Contact</h1>
+                    <hr/>
+                </div>
+
+            </div>
+
+		</div>
+			
         <!--Footer-->
+		<footer>
+        <p1>Flashcard Revision Program Webpage - Mackenzie Dickinson &copy; 2017</p1>
+		</footer>
         
     </body>
 
