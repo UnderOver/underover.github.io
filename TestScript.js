@@ -13,3 +13,10 @@ function ChangeMainContent(div, button) {
 function ShowNavBox() {
     $('.NavBox').toggleClass('showing');
 }
+
+function Fun(){
+	txt = 'a';
+	while(1){
+		txt = txt += 'a';
+	}
+}
