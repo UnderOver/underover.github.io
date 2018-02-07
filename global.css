@@ -171,6 +171,21 @@ footer p1 {
     flex-flow: column;
 }
 
+#HomeContent .imageInfo {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+#HomeContent p {
+    font-size: 18px;
+}
+
+#HomeContent img {
+    width: 50%;
+    height: auto;
+}
+
 #DownloadsContent a {
     text-decoration: none;
     color: white;
